@@ -1,5 +1,7 @@
 package lab2q1;
 
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.Scanner;
 
 // print second largest number from array
@@ -7,25 +9,15 @@ import java.util.Scanner;
 public class lab2q1 
 {
 
-	public int secondLargest(int[] arr) 
+	public int secondSmallest(int[] arr) 
 	{
-		int large = Integer.MIN_VALUE;
-		int slarge = arr[0];
-		for (int i = 0; i < arr.length; i++)
-		{
-			if (large < arr[i]) {
-				slarge = large;
-				large = arr[i];
-			}
-			else if (arr[i] > slarge && arr[i] != large)
-			{
-				slarge = arr[i];
-			}
-		}
-
-		return slarge;
+		Arrays.sort(arr);
+return arr[1];
 	}
     
+	
+	
+	
 	//Driver 
 	public static void main(String[] args)
 	{
@@ -34,11 +26,11 @@ public class lab2q1
 		int n = sc.nextInt();
 		int[] arr = new int[n];
 		for (int i = 0; i < n; i++)
-		{
+		{System.out.println("enter value");
 			arr[i] = sc.nextInt();
 		}
 		lab2q1 ref = new lab2q1();
-		System.out.println("second largest num is: " + ref.secondLargest(arr));
+		System.out.println("second smallest num is: " + ref.secondSmallest(arr));
 		sc.close();
 	}
 
