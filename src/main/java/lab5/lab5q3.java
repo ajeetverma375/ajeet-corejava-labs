@@ -19,7 +19,7 @@ public class lab5q3 {
         {
         	if(salary<3000)
         	{
-        		throw new EmployeeException("Your Salary is below 3000");
+        		throw new EmployeeException("Your Salary is below 3000");  // imported via package
         	}
         	else
         	{
