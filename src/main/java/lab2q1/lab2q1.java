@@ -1,7 +1,6 @@
 package lab2q1;
 
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.Scanner;
 
 // print second largest number from array
